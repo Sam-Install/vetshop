@@ -6,85 +6,105 @@ import { FaFacebook, FaLinkedin } from "react-icons/fa"
 
 const ContactForm = () => {
   return (
-    <section className='my-20 px-4 sm:px-8'>
-      <div className='grid grid-cols-1 sm:grid-cols-2 gap-10'>
+    <section
+      className="my-24 px-4 sm:px-8 max-w-7xl mx-auto"
+      aria-labelledby="contact-heading"
+    >
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
 
         
-        <div className='space-y-6 justify-center items-center'>
-          <h1 className='text-2xl text-green-400 font-bold text-center sm:text-left'>
+        <div className="space-y-8">
+          <h1
+            id="contact-heading"
+            className="text-3xl font-bold text-green-500 text-center lg:text-left"
+          >
             Leave Us a Message
           </h1>
 
-          <form className='space-y-4'>
+          <p className="text-gray-600 text-center lg:text-left max-w-md">
+            Have a question or need veterinary assistance?  
+            Fill in the form below and our team will get back to you promptly.
+          </p>
+
+          <form className="space-y-5" aria-label="Contact form">
             <input
               type="text"
               placeholder="Your Name"
-              className='w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-300'
+              aria-label="Your Name"
+              className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-400"
             />
 
             <input
               type="email"
               placeholder="Your Email"
-              className='w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-300'
+              aria-label="Your Email"
+              className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-400"
             />
 
             <input
-              type="text"
-              placeholder="Your Phone"
-              className='w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-300'
+              type="tel"
+              placeholder="Your Phone Number"
+              aria-label="Your Phone Number"
+              className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-400"
             />
 
             <textarea
               placeholder="Your Message"
               rows="5"
-              className='w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-300'
+              aria-label="Your Message"
+              className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-400"
             />
 
             <button
               type="submit"
-              className='w-full bg-green-400 hover:bg-green-500 text-white font-semibold py-2 rounded'
+              className="w-full bg-green-500 hover:bg-green-600 transition text-white font-semibold py-3 rounded-lg shadow-md"
             >
-              Send
+              Send Message
             </button>
           </form>
         </div>
 
-        
-        <div className='space-y-6 text-gray-800'>
-          <h2 className='text-2xl font-bold text-green-400 text-center sm:text-left'>
+      
+        <div className="space-y-8">
+          <h2 className="text-3xl font-bold text-green-500 text-center lg:text-left">
             Contact Details
           </h2>
 
-          <div className='flex items-center gap-3'>
-            <IoCall className='text-xl text-green-500' />
-            <p>0720984113 / 0708275214</p>
+          <div className="space-y-5 text-gray-800 text-base">
+            <div className="flex items-center gap-4">
+              <IoCall className="text-2xl text-green-500" />
+              <p>0720 984 113 / 0708 275 214</p>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <IoMail className="text-2xl text-green-500" />
+              <p>dianivet@gmail.com</p>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <IoLocationSharp className="text-2xl text-green-500" />
+              <p>Diani Beach, South Coast, Kenya</p>
+            </div>
           </div>
 
-          <div className='flex items-center gap-3'>
-            <IoMail className='text-xl text-green-500' />
-            <p>dianivet@gmail.com</p>
-          </div>
-
-          <div className='flex items-center gap-3'>
-            <IoLocationSharp className='text-xl text-green-500' />
-            <p>Diani Beach, southcoast</p>
-          </div>
-
-          
-          <div className='flex gap-4 pt-4'>
+        
+          <div className="flex gap-6 pt-4 justify-center lg:justify-start">
             <a
               href="https://facebook.com"
               target="_blank"
               rel="noreferrer"
-              className='text-2xl text-green-500 hover:text-green-700'
+              aria-label="Visit DianiVet on Facebook"
+              className="text-3xl text-green-500 hover:text-green-700 transition"
             >
               <FaFacebook />
             </a>
+
             <a
               href="https://linkedin.com"
               target="_blank"
               rel="noreferrer"
-              className='text-2xl text-green-500 hover:text-green-700'
+              aria-label="Visit DianiVet on LinkedIn"
+              className="text-3xl text-green-500 hover:text-green-700 transition"
             >
               <FaLinkedin />
             </a>

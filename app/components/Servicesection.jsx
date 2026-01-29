@@ -7,90 +7,111 @@ const services = [
   {
     img: '/nutrition.jpeg',
     title: "Nutrition Advice",
-    description: "Expert guidance to ensure your pet gets the right balance of nutrients for optimal health, weight management, and energy."
+    description:
+      "Expert guidance to ensure your pet receives a balanced diet that supports healthy growth, energy, and long-term wellbeing."
   },
   {
     img: '/multivitamins.jpeg',
     title: 'Multivitamin Jabs',
-    description: "Support your pet’s immune system and overall vitality with safe and effective multivitamin injections tailored to their needs."
+    description:
+      "Safe and effective multivitamin injections designed to boost immunity, vitality, and overall health."
   },
   {
     img: '/dentist.jpeg',
     title: "Dental Services",
-    description: "Full dental care, including checkups, cleanings, and treatments to prevent pain, decay, and gum disease."
+    description:
+      "Professional dental checkups, cleanings, and treatments to prevent gum disease, pain, and tooth decay."
   },
   {
     img: '/general.jpeg',
-    title: "General Wellness Checkup",
-    description: "Routine checkups to monitor your pet’s health, detect early signs of illness, and keep vaccinations up to date."
+    title: "General Wellness Checkups",
+    description:
+      "Routine health assessments to detect early signs of illness and keep vaccinations up to date."
   },
   {
     img: '/nutrition.jpeg',
     title: "Weight Management",
-    description: "Personalized programs to help pets achieve and maintain a healthy weight with diet plans and exercise guidance."
+    description:
+      "Personalized diet and exercise plans to help pets achieve and maintain a healthy weight."
   },
   {
     img: '/multivitamins.jpeg',
     title: 'Vaccination Plans',
-    description: "Comprehensive immunization schedules to protect your pet against common and serious diseases."
+    description:
+      "Comprehensive immunization programs that protect pets from common and serious diseases."
   },
   {
     img: '/dentist.jpeg',
     title: "Ear & Eye Care",
-    description: "Gentle examinations and treatments to prevent and address infections, irritation, and other sensory health issues."
+    description:
+      "Gentle examinations and treatments to manage infections, irritation, and sensory health issues."
   },
   {
     img: '/general.jpeg',
     title: "Parasite Prevention",
-    description: "Effective solutions for fleas, ticks, worms, and other parasites to keep your pet comfortable and disease-free."
+    description:
+      "Reliable prevention and treatment solutions for fleas, ticks, worms, and other parasites."
   },
   {
     img: '/nutrition.jpeg',
     title: "Senior Pet Care",
-    description: "Specialized wellness checks and support for older pets, focusing on mobility, diet, and quality of life."
+    description:
+      "Specialized care focused on mobility, nutrition, comfort, and quality of life for aging pets."
   },
   {
     img: '/multivitamins.jpeg',
     title: "Behavioral Advice",
-    description: "Professional guidance to address anxiety, training issues, and behavioral challenges safely and effectively."
+    description:
+      "Professional behavioral guidance to address anxiety, training challenges, and habits safely."
   }
 ]
 
 const ServiceSection = () => {
   return (
-    <section className='my-10 px-4 sm:px-8'>
-      <h1 className='text-center text-2xl text-green-400 font-bold mb-8'>
-        Our Veterinary Services
-      </h1>
+    <section className="my-24 px-4 sm:px-8">
 
-      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'>
+  
+      <div className="max-w-3xl mx-auto text-center mb-14">
+        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">
+          Our <span className="text-green-500">Veterinary Services</span>
+        </h1>
+        <p className="mt-4 text-gray-600 leading-relaxed">
+          At DianiVet, we offer a comprehensive range of veterinary services designed
+          to keep your pets healthy, comfortable, and thriving at every stage of life.
+        </p>
+      </div>
+
+      
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
         {services.map((service, index) => (
-          <div
+          <article
             key={index}
-            className='bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition'
+            className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300"
           >
-        
-            <div className='relative w-full h-40 sm:h-48'>
+
+          
+            <div className="relative w-full h-44 sm:h-52">
               <Image
                 src={service.img}
-                alt={service.title}
+                alt={`${service.title} at DianiVet`}
                 fill
-                className='object-cover'
+                className="object-cover"
               />
             </div>
 
             
-            <div className='p-4'>
-              <h2 className='text-xl font-semibold text-gray-800'>
+            <div className="p-5 text-center sm:text-left">
+              <h2 className="text-lg font-semibold text-gray-900">
                 {service.title}
               </h2>
-              <p className='text-gray-600 mt-2'>
+              <p className="mt-2 text-sm text-gray-600 leading-relaxed">
                 {service.description}
               </p>
             </div>
-          </div>
+          </article>
         ))}
       </div>
+
     </section>
   )
 }
