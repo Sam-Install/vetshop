@@ -6,7 +6,7 @@ const Hero3 = () => {
     <section className="relative h-100 w-full">
       
       <Image
-        src="/abs.jpeg"      
+        src="/dogy.jpeg"      
         alt="Our Services"
         fill
         className="object-cover"

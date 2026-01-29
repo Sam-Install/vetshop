@@ -6,7 +6,7 @@ const Hero2 = () => {
     <section className="relative h-100 w-full">
       
       <Image
-        src="/abs.jpeg"      
+        src="/Abs.jpeg"      
         alt="About Us Background"
         fill
         className="object-cover"
